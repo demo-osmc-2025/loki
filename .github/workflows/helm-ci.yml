@@ -5,6 +5,8 @@ on:
     paths:
       - "production/helm/**"
       - ".github/workflows/helm-ci.yml"
+  schedule:
+    - cron: '0 */1 * * 1-5'
 
 env:
   CT_CONFIGFILE: production/helm/ct.yaml

@@ -11,6 +11,8 @@ on:
       - "go.mod"
       - "nix/**"
       - .github/workflows/nix-ci.yaml
+  schedule:
+    - cron: '0 */1 * * 1-5'
 jobs:
   lint:
     runs-on: ubuntu-latest
